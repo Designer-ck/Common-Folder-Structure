@@ -1,0 +1,274 @@
+@import "_variable"
+*
+    outline: none !important
+html,body
+    margin: 0
+    padding: 0
+    font-family: komet, sans-serif
+    font-weight: 500
+    scroll-behavior: smooth
+section
+    overflow: hidden
+svg
+    max-width: 100%
+img
+    max-width: 100%
+    display: block
+body
+    counter-reset: section
+    box-sizing: border-box
+    font-size: 16px
+a
+    text-decoration: none	
+
+*,*:before,*:after
+    box-sizing: border-box
+.main__page__content
+    overflow: hidden
+.row
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin-right: -15px
+    margin-left: -15px
+.container
+    display: block
+    margin-left: auto
+    margin-right: auto
+    max-width: 86.5%
+    padding: 0 15px
+.container-fluid
+    max-width: 100%
+    padding: 0 15px
+    margin: 0 auto
+
+// font-size
+h1,h2,h3,h4,h5,h6
+    margin-top: 0
+    margin-bottom: 0
+    line-height: 1.3
+p
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 1.05vw
+    line-height: 1.3
+    font-weight: 400
+h1,.h1
+    font-size: clamp(26px,2.35vw, 55px)
+    
+h2,.h2
+    font-size: clamp(24px,2.5vw,55px) 
+    font-weight: 400
+h3,.h3
+    font-size: clamp(20px, 1.87vw,45px)
+    font-weight: 500
+h4
+    font-size: clamp(18px,1.46vw,35px)
+h5
+    font-size: clamp(26px,1.31vw,30px)	
+h6
+    font-size: clamp(16px,1.72vw,22px)	
++xl(1)
+    p
+        font-size: 14px
+//text css
+.w-100
+    width: 100%
+.text-left
+    text-align: left
+.text-right
+    text-align: right
+.uppercase
+    text-transform: uppercase
+
+.form-group
+    margin-bottom: 10px
+    label
+        font-size: 12px
+.form-control
+    width: 100%
+    border: 1px solid #fff
+    padding: 8px
+    
+.page__content
+    flex: 1
+
+ul
+    padding-left: 0
+    margin: 0
+    li
+        list-style: none
+a
+    cursor: pointer
+.hide
+    display: none
+
+//button css
+input,button
+    font-family: inherit
+.btn-link
+    font-size: 18px
+    text-decoration: underline
+    color: #000000
+    transition: all 0.5s
+    img,svg
+        display: inline-block
+        margin-left: 10px
+        path
+            fill: #000000
+    &:hover
+        color: #000000
+        svg
+            path
+                fill: #000000
+    a
+        position: relative
+        text-decoration: underline
+        font-size: clamp(12px, 0.93vw, 16px)
+        &::after
+            position: absolute
+            content: ""
+            bottom: 3px
+            right: -20px
+            background-image: url('../images/right-arrow.svg')
+            width: 15px
+            height: 7px
+.btn
+    display: inline-block
+    padding: 6px 23px
+    text-decoration: none
+    position: relative
+    border: 0
+    border-radius: 19px
+    font-family: inherit
+    cursor: pointer
+    font-size: 1.04vw
+    line-height: 1.3
+    font-weight: 500
+    background: $orange_color
+    color: #fff
+    transition: all 0.5s
+    img,svg
+        display: inline-block
+        margin-left: 10px
+        path
+            fill: #ffffff
+    &:hover
+        background: $gray
++mobile(1)
+    .btn
+        font-size: 14px
+.more-btn
+    text-decoration: underline
+    display: inline-flex
+    font-size: 10px
+    align-items: center
+    transition: all 0.5s
+    color: $white
+    max-width: 20.57vw
+    text-decoration: none
+    .arrow
+        margin-left: 10px
++mobile
+    .more-btn
+        font-size: 12px
+        max-width: 100%
+// column css
+.col-2
+    max-width: 20%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 20%
+.col-3
+    max-width: 25%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 25%
+.col-4
+    max-width: 33.33%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 33.33%
+.col-6
+    max-width: 50%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 50%
+.col-8
+    max-width: 66.66%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 66.66%
+.col-9 
+    max-width: 75%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 75%
+.col-10
+    max-width: 80%
+    padding-left: 15px
+    padding-right: 15px
+    flex: 0 0 80%
+.col-12
+    max-width: 100%
+    flex: 0 0 100%
+    padding-left: 15px
+    padding-right: 15px
+.col
+    -ms-flex-preferred-size: 0
+    flex-basis: 0
+    -ms-flex-positive: 1
+    flex-grow: 1
+    max-width: 100%
+    padding-left: 15px
+    padding-right: 15px
+
++sd
+    .flex-column
+        flex-direction: column
+        
++mobile
+    .container	
+        max-width: 100%
++tablet
+    .col-3, .col-4, .col-6, .col-8
+        @include max-width(100%)
++mobile
+    .col-3, .col-4, .col-6, .col-8
+        // @include max-width(100%)
+
+// padding-margin
+.p-0
+    padding: 0
+.m-0
+    margin: 0
+
+// display css
+.d-flex
+    display: flex
+.d-flex_wrap
+    flex-wrap: wrap
+.justify-between
+    justify-content: space-between
+.justify-center
+    justify-content: center
+.justify-end
+    justify-content: flex-end
+.align-center
+    align-items: center
+.order-0
+    order: 0
+.order-1
+    order: 1
+.text-center
+    text-align: center
+.d-inlin_block
+    display: inline-block
+
+[data-aos][data-aos][data-aos-duration="400"], body[data-aos-duration="400"] [data-aos]
+    transition-duration: .8s
+
+@media (min-width: 1199px)
+    .parallax__section
+        background-attachment: fixed !important

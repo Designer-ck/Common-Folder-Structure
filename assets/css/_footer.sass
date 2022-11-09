@@ -1,0 +1,91 @@
+@import "_variable"
+
+.fclp_footer--sec
+    background: $green_color
+    padding: 13.02vw 0
+    position: relative
+    overflow: hidden
+    .footer--content
+        position: relative
+        z-index: 1
+        img
+            margin: 0 auto 6.51vw
+            height: auto
+        .fclp_form
+            text-align: center
+            h2
+                color: $white
+                font-weight: 800
+                margin-bottom: 2.09vw
+            .form-group
+                position: relative
+                z-index: 1
+            .form-control
+                width: 36.19vw
+                border: none
+                padding: 1.15vw 1.05vw
+                border-radius: 2.09vw 0 0 2.09vw
+                font-size: 1.41vw
+            .contact-signup
+                font-size: 1.31vw
+                font-weight: 700
+                text-transform: uppercase
+                padding: 1.20vw 3.64vw
+                border-radius: 2.09vw
+                margin-left: -5.2vw
+                line-height: 1.4
+                &::placeholder
+                    opacity: 0.4
+    .fclp__footer--leafe
+        position: absolute
+        left: -36%
+        bottom: -43%
+        opacity: 0.3
+        max-width: 86.19vw
+        height: 57.44vw
+    .fclp__footer-top--leafe
+        position: absolute
+        right: -13%
+        top: 6%
+        opacity: 0.3
+        transform: rotate(270deg)
+        max-width: 32.18vw
+        height: 21.45vw
++xl
+    .fclp_footer--sec 
+        .fclp__footer-top--leafe
+            max-width: 30%
+        .fclp__footer--leafe
+            left: -31%
+            bottom: -46%
+            max-width: 60%
++tablet
+    .fclp_footer--sec 
+        .footer--content 
+            img
+                max-width: 50%
+            .fclp_form 
+                .form-control
+                    width: 300px
+                    border: none
+                    padding: 10px 20px
+                    border-radius: 20px 0 0 20px
+                    font-size: 14px
+                .contact-signup
+                    font-size: 14px
+                    padding: 10px 20px
+                    border-radius: 20px
++mobile
+    .fclp_footer--sec 
+        .footer--content 
+            .fclp_form 
+                h2
+                    margin-bottom: 20px
++mobile(1)
+    .fclp_footer--sec 
+        .footer--content 
+            .fclp_form 
+                .form-control
+                    width: 180px
+        
+

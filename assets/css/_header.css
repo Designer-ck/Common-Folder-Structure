@@ -1,0 +1,260 @@
+.toggle {
+  overflow-y: hidden;
+}
+
+.icon {
+  position: relative;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  text-align: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 65%;
+  cursor: pointer;
+  background-color: white;
+}
+.icon.change-backGround {
+  background-color: #fff;
+}
+
+.icon .line {
+  height: 4px;
+  position: absolute;
+  border-radius: 5px;
+}
+.icon .line.line1 {
+  width: 46px;
+  top: 28px;
+  left: 10px;
+  transition: all 0.3s ease-in-out;
+  background: #3C003C;
+}
+.icon .line.line2 {
+  width: 30px;
+  top: 36px;
+  left: 10px;
+  transition: all 0.3s ease-in-out;
+  background: #E90D80;
+}
+.icon i {
+  opacity: 0;
+}
+
+div.burgure {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.icon.clicked .line1 {
+  transform: rotate(133deg);
+  transition: all 0.3s ease-in-out;
+}
+.icon.clicked .line2 {
+  transform: rotate(45deg);
+  top: 29px;
+  width: 46px;
+  left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main {
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 999;
+  padding-top: 60px;
+  opacity: 0;
+}
+
+.box {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  z-index: 5;
+  width: 25px;
+  height: 25px;
+  border: 2px solid red;
+  transform: scale(0) rotate(0) translate(-50%, -50%);
+  animation: rotate_scale 11s ease-in-out forwards infinite;
+}
+
+ul#links {
+  max-width: 40%;
+  flex: 0 0 40%;
+}
+
+.toggle_img {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+.toggle_img img {
+  animation: svg 16s linear infinite;
+}
+
+.toggle_img img {
+  position: absolute;
+  bottom: 20%;
+  width: clamp(250px, 29vw, 550px);
+}
+
+ul.dropdown {
+  position: relative;
+  top: 8px;
+  padding-left: 50px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 0;
+  width: 100%;
+  transition: max-height, 0.8s ease-in-out;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+ul.dropdown.active {
+  max-height: 500px;
+  padding-left: 50px;
+}
+
+ul#links a {
+  position: relative;
+}
+ul#links a:hover {
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  color: #E90D80;
+}
+ul#links a:hover::before {
+  content: "";
+  background: #E90D80;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -2px;
+  transition: all 0.3s ease-in-out;
+}
+ul#links a::before {
+  content: "";
+  width: 0%;
+}
+
+/* header Meadia Query start */
+@media (max-width: 1366px) {
+  ul#links a {
+    font-size: 2.5rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .toggle_img img {
+    width: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .toggle_img img {
+    left: 42%;
+    top: 69px;
+  }
+
+  ul#links {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+
+  div#toggler {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon .line.line1 {
+    top: 20px;
+    width: 32px;
+  }
+  .icon .line.line2 {
+    top: 27px;
+    width: 25px;
+  }
+  .icon.clicked .line2 {
+    width: 32px;
+    top: 20px;
+  }
+  .icon.clicked .toggle_lines {
+    position: relative;
+    top: 3px;
+  }
+}
+@media (max-width: 767px) {
+  ul#links {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  #navbar {
+    padding: 0 15px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .toggle_img img {
+    width: 250px;
+    left: 38%;
+    top: 169px;
+  }
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background: #AFAAE6;
+  display: flex;
+  transform: translateY(-100%);
+  transition: 1s ease;
+  overflow: auto;
+}
+#navbar ul#links {
+  list-style: none;
+  padding-top: 160px;
+}
+#navbar ul#links li {
+  padding: 5px;
+  margin: 15px 0 0;
+  text-align: left;
+  position: relative;
+}
+#navbar ul#links li a {
+  text-decoration: none;
+  color: #3C003C;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 560px) {
+  .toggle_img img {
+    display: none;
+  }
+
+  ul#links li {
+    text-align: center;
+  }
+  ul#links li a {
+    font-size: 1.5rem !important;
+  }
+
+  .logo img {
+    width: 230px;
+  }
+}

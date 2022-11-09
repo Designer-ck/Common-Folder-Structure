@@ -1,0 +1,683 @@
+@import '_variable'
+@import '_mixin'
+
+// hero banner css
+.fclp__hero--banner
+    padding: 20.5% 0 9%
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    background-position: center center
+    z-index: 1
+    height: 100vh
+    display: flex
+    align-items: center
+    .hero__banner--content
+        .fclp__banner--logo
+            margin: 0 auto 5vw
+            height: auto
+        .scroll
+            margin: 0 auto
+            max-width: 4.94vw
+            height: 4.94vw
+    .fclp__banner--leafe
+        position: absolute
+        left: -12%
+        bottom: -4%
+        opacity: 0.5
+        max-width: 43.54vw
+        height: 29.01vw
++tablet          
+    .fclp__hero--banner 
+        .hero__banner--content 
+            .fclp__banner--logo
+                max-width: 50%
+                
+            .scroll
+                max-width: 8%
++xl(1)
+    .fclp__about--sec 
+        .fclp__about--bottomcontent 
+            .right__sec--content 
+                ul 
+                    li
+                        &::marker
+                            font-size: 14px
+// artical css
+.fclp__artical--sec
+    background: $green_color
+    .row
+        margin: 0
+    .col-6
+        padding: 0
+    .fclp__background--sec
+        padding-top: 56%
+        background-size: cover
+        background-repeat: no-repeat
+        position: relative
+        background-position: center center
+    .fclp__content--sec
+        display: flex
+        align-items: center
+        height: 100%
+        position: relative
+        .fclp__articale--leafe
+            position: absolute
+            right: -17%
+            top: -5%
+            opacity: 0.3
+            max-width: 45.10vw
+            height: 30.10vw
+        .fclp__content--sec-inner
+            padding-left: 3.39vw
+            position: relative
+            z-index: 1
+            p
+                max-width: 41.32vw
+                color: $white
+                margin-bottom: 1.83vw
+                a
+                    color: #434535
+                .read-btn
+                    margin-left: 1.56vw
+                    a
+                        color: $white
+                        font-size: 1.05vw
++max(1800)
+    .fclp__artical--sec 
+        .fclp__content--sec 
+            .fclp__content--sec-inner 
+                p 
+                    .read-btn
+                        display: block
+                        margin-left: 0
+                        margin-top: 20px
++tablet
+    .fclp__artical--sec 
+        .fclp__content--sec
+            padding: 40px 0
+            .fclp__content--sec-inner
+                padding: 0 20px
+                p
+                    max-width: 100%
+                    .read-btn 
+                        a
+                            font-size: 16px
+// slider section css
+.fclp__slider--sec
+    padding: 2.60vw 0
+    background: $dark_green_color
+    position: relative
+    .swiper-container
+        position: relative
+        width: 90%
+        margin: 0 auto
+        overflow: hidden
+        padding: 8.81vw 3.64vw
+        > .swiper-slide__content
+            position: absolute
+            top: 0
+
+        .swiper-slide
+            transition: all 200ms linear
+            .fclp__slide-image
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+            &:not(.swiper-slide-active)
+                opacity: 0.2
+            &::after,&::before
+                content: ""
+            &::before
+                padding-top: 33.33vw
+                float: left
+            &::after
+                clear: both
+                display: table
+            .fclp__slide-image
+                img
+                    border-radius: 40px
+                    object-fit: cover
+                    height: 100%
+                    width: 100% 
+                    max-width: 100%
+                .fclp__projects-heading
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                    width: 100%
+                    text-align: center
+                    padding: 0 10px
+                    .fclp__heading
+                        sup
+                            font-size: 50%
+                    h3
+                        font-size: 1.32vw
+                        color: $white
+                        font-weight: 800
+                        margin-bottom: 2.6vw
+                        line-height: 1.2
+            &.swiper-slide-active
+                transform: scale(1.5)
+                .fclp__slide-image
+                    .fclp__projects-heading
+                        h3
+                            // font-size: 2.09vw
+    .slider-prev
+        position: absolute
+        content: ""
+        background: url(../images/arrow-white.svg)
+        width: 4.94vw
+        height: 4.94vw
+        background-size: cover
+        background-repeat: no-repeat
+        transform: rotate(90deg)
+        left: 1.50vw
+    .slider-next
+        position: absolute
+        content: ""
+        background: url(../images/arrow-white.svg)
+        width: 4.94vw
+        height: 4.94vw
+        background-size: cover
+        background-repeat: no-repeat
+        transform: rotate(270deg)
+        right: 1.50vw
+        max-width: 4.94vw
+        height: 4.94vw
+    .swiper-button-prev,.swiper-button-next
+        &::after
+            display: none
+    .swiper-slide-active
+        .overlay
+            position: relative
+            &::before
+                position: absolute
+                content: ""
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                background: rgba(67, 69, 53, 0.4)
+                transition: all 0.3s ease-in-out
++max(1850)
+    .fclp__slider--sec 
+        .swiper-container 
+            .swiper-slide 
+                .fclp__slide-image 
+                    .fclp__projects-heading 
+                        h3 
+                            br
+                                display: none
+                &.swiper-slide-active
+                    transform: scale(1.3)
+                &::before
+                    padding-top: 40vw
++sd
+    .fclp__slider--sec 
+        .swiper-container
+            padding: 12.81vw 3.64vw
+            .swiper-slide
+                &::before
+                    padding-top: 52vw
+                .fclp__slide-image 
+                    .fclp__projects-heading 
+                        h3
+                            font-size: 18px
++tablet
+    .fclp__slider--sec 
+        .swiper-container
+            padding: 14.81vw 3.64vw
++max(766)
+    .fclp__slider--sec 
+        .swiper-container
+            padding: 5.81vw 3.64vw 
+            .swiper-slide
+                &::before
+                    padding-top: 120vw 
+                .fclp__slide-image
+                    .fclp__projects-heading
+                        h3
+                            font-size: 20px 
+                    img
+                        object-position: top
+                &.swiper-slide-active
+                    transform: scale(1)
+
+// bg image css
+.fclp__bgimage--sec
+    padding-top: 29.6%
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    background-position: center center
+    z-index: 1
+// about css
+.fclp__about--sec
+    background: $yellow_color
+    text-align: center
+    position: relative
+    h2
+        color: $white
+        margin-bottom: 1.30vw
+        font-weight: 800
+    p
+        color: $white
+        margin-bottom: 1.83vw
+    .fclp__about--topcontent
+        padding: 7.56vw 0 5.72vw
+        max-width: 69.71vw
+        margin: 0 auto
+        position: relative
+        z-index: 1
+    .fclp__about-top--leafe
+        position: absolute
+        right: -18%
+        top: 3%
+        opacity: 0.3
+        max-width: 38.07vw
+        height: 34.37vw
+    .fclp__about-bottom--leafe
+        position: absolute
+        left: -23%
+        bottom: -30%
+        opacity: 0.3
+        max-width: 69.94vw
+        height: 54.94vw
+    .fclp__about--bottomcontent
+        padding-bottom: 5.46vw
+        position: relative
+        z-index: 1
+        .col-8
+            max-width: 52.4%
+            flex: 0 0 52.4%
+        .col-4
+            max-width: 47.6%
+            flex: 0 0 47.6%
+        .left__sec--video
+            position: relative
+            z-index: 1
+            iframe,video
+                max-width: 43.12vw
+                height: 35.1vw
+                border: none
+        .right__sec--content
+            h3
+                color: $white
+                margin-bottom: 25px
+                text-align: left
+            ul
+                max-width: 37.43vw
+                text-align: left
+                padding-left: 1.31vw
+                li
+                    list-style: disc
+                    text-align: left
+                    &::marker
+                        color: $white
++tablet
+    .fclp__about--sec 
+        .fclp__about--bottomcontent
+            padding: 0 20px 5.46vw
+            .col-8,.col-4
+                @include max-width(100%)
+            .right__sec--content 
+                ul
+                    max-width: 100%
+            .right__sec--content
+                padding: 40px 0 0
+            .left__sec--video 
+                iframe,video
+                    max-width: 70%
+        .fclp__about--topcontent
+            max-width: 100%
++mobile
+    .fclp__about--sec 
+        .fclp__about--bottomcontent
+            .left__sec--video 
+                iframe,video
+                    max-width: 100%
+                    height: 100%
+// our mission
+.fclp__objectives--sec
+    background: $dark_green_color
+    padding: 15.10vw 0 13.28vw
+    position: relative
+    z-index: 1
+    .col-4
+        max-width: 49%
+        flex: 0 0 49%
+    .col-8 
+        max-width: 51%
+        flex: 0 0 51%
+    .fclp__objective-top--leafe
+        position: absolute
+        left: -9%
+        top: 04%
+        opacity: 0.3
+        max-width: 28.28vw
+        height: 18.85vw
+    .fclp__objective-bottom--leafe
+        position: absolute
+        right: -22%
+        top: 12%
+        opacity: 0.3
+        max-width: 63.59vw
+        height: 45.83vw
+    .fclp--mission--sec
+        position: relative
+        z-index: 1
+        padding-right: 7.42vw
+        h2
+            color: $white
+            margin-bottom: 2.60vw
+            font-weight: 800
+        h3
+            color: $white
+            // max-width: 39.85vw
+            font-size: 1.56vw
+    .fclp--objectives--sec
+        position: relative
+        z-index: 1
+        h2
+            color: $white
+            margin-bottom: 2.60vw
+            font-weight: 800
+        p
+            color: $white
+            margin-bottom: 1.82vw
+            max-width: 42.29vw
+        ul
+            li
+                list-style: disc
+                text-align: left
+                margin-left: 20px
+                &::marker
+                    color: $white
++tablet
+    .fclp__objectives--sec
+        padding: 50px 0
+        .fclp--mission--sec
+            padding: 0 0 50px
+    .fclp__objectives--sec 
+        .col-4,.col-8
+            @include max-width(100%)
+        .fclp--mission--sec 
+            h3
+                max-width: 100%
+        .fclp--objectives--sec
+            
+            p
+                max-width: 100%
+    .fclp__objectives--sec 
+        .fclp--objectives--sec 
+            ul 
+                li
+                    &::marker
+                        font-size: 14px
++mobile
+    .fclp__objectives--sec
+        padding: 50px 10px
+        .fclp--mission--sec 
+            h3
+                font-size: 18px
+
+            
+// bg image bottom css
+.fclp__bgimage-bottom--sec
+    padding-top: 56.6%
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    background-position: center center
+    z-index: 1
+    .fclp__bgimage--leafe
+        position: absolute
+        left: -15%
+        bottom: -20%
+        opacity: 0.5
+        max-width: 48.90vw
+        height: 32.65vw
+// action areas css
+.fclp__article-block
+    margin: auto
+    position: relative
+.fclp__article
+    position: absolute
+    visibility: hidden
+.shown, .show
+    position: static
+    visibility: visible
+
+@-webkit-keyframes show-block
+from
+    opacity: 0
+    transform: translateY(-100%)
+
+to
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes show-block
+from
+    opacity: 0
+    transform: translateY(-100%)
+
+to
+    opacity: 1
+    transform: translateY(0)
+
+.tabs-block
+    // position: relative
+
+li
+    text-align: center
+    flex: auto
+    font-size: 0.94vw
+    font-weight: 400
+    color: #1bb1a5
+    position: relative
+    z-index: 2
+    transition: 300ms cubic-bezier(0.86, 0, 0.33, 0.26)
+
+    &.active
+        color: #fff
+        pointer-events: none
+        text-shadow: 0 1px rgba(0, 0, 0, 0.3)
+
+.fclp__shape
+    position: absolute
+    // left: -70px
+    bottom: 100%
+    transition: 500ms
+    background-size: cover
+    background-repeat: no-repeat
+    width: auto
+    img
+        transform: scale(1.5)
+.fclp__actionarea--sec
+    background: $light_gray_color
+    padding: 5.20vw 0 0
+    text-align: center
+    position: relative
+    .fclp__action-areas--leafe
+        position: absolute
+        right: -18%
+        top: -9%
+        opacity: 0.3
+        transform: rotate(270deg)
+        max-width: 53.54vw
+        height: 35.72vw
+    .fclp__actionarea__content--block
+        position: relative
+        z-index: 1
+        margin-bottom: 4.34vw
+        h2
+            font-weight: 800
+            margin-bottom: 2.61vw
+        h4
+            font-weight: 500
+            max-width: 70.44vw
+            margin: 0 auto 1.83vw
+    .fclp__actionarea__tab--block
+        background: $dark_green_color
+        padding: 0 0 2.86vw
+        position: relative
+        z-index: 9
+        .fclp__tab-menu 
+            max-width: 57.86vw
+            margin: 0 auto
+            padding: 0 2.85em
+            .fclp__tab-a
+                a
+                    width: 5.93vw
+                    height: 5.93vw
+                    border-radius: 50%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin: 0 auto
+                img
+                    max-width: 2.70vw
+                    height: 2.70vw
+                &.active
+                    transform: scale(1.2)
+                &.active
+                    a
+                        background-color: #BE5027
+                        transition: all 0.6s ease-in-out
+                // &:not(last-child)
+                //     margin-right: 3.3vw
+
+        .fclp__article
+            text-align: left
+            h3
+                color: $white
+                padding: 2.60vw 0 1.56vw
+                text-transform: uppercase
+                font-weight: 800
+            h5
+                color: $white
+                margin-bottom: 2.09vw
+                font-weight: 500
+                font-size: 1.05vw
+            p
+                color: $white
+                a
+                    color: #C3B35A
+// +xl
+//    .fclp__shape
+//         top: -46px
+// +sd
+//     .fclp__shape
+//         top: -42px
++tablet
+    .fclp__shape
+        // top: -37px
+    .fclp__actionarea--sec
+        padding: 40px 0 0 
+        .fclp__actionarea__tab--block 
+            .fclp__tab-menu
+                max-width: 100%
+                padding: 0
+                .fclp__tab-a
+                    a
+                        width: 40px
+                        height: 40px
+                        img
+                            max-width: 24px
+                            height: 24px
+        .fclp__actionarea__content--block
+            margin-bottom: 50px
++mobile(1)
+    .fclp__actionarea--sec 
+        .fclp__actionarea__tab--block
+            padding: 0 0 30px
+            .fclp__article 
+                h3
+                    font-size: 18px
+                    padding: 20px 0
+                h5
+                    font-size: 16px
+                    margin-bottom: 15px
+        .fclp__actionarea__content--block 
+            h4
+                max-width: 100%
+// summit css
+.fclp__summit--sec
+    background: $yellow_color
+    position: relative
+    z-index: 1
+    .row
+        margin: 0
+    .col-6
+        padding: 0
+    .fclp__background--sec
+        padding-top: 56%
+        background-size: cover
+        background-repeat: no-repeat
+        position: relative
+        background-position: center center
+        overflow: hidden
+        .fclp__summit-right--leafe
+            position: absolute
+            left: -24%
+            bottom: -3%
+            opacity: 0.3
+            max-width: 42.03vw
+            height: 27.96vw
+    .fclp__content--sec
+        display: flex
+        align-items: center
+        height: 100%
+        position: relative
+        .fclp__summit-left--leafe
+            position: absolute
+            left: -28%
+            top: -6%
+            opacity: 0.3
+            max-width: 30.10vw
+            height: 20.10vw
+        .fclp__content--sec-inner
+            padding: 3.64vw 0 3.64vw 7.29vw
+            position: relative
+            z-index: 1
+            h2
+                color: $white
+                margin-bottom: 2.60vw
+                font-weight: 800
+
+            p
+                max-width: 39.42vw
+                color: $white
+                margin-bottom: 1.83vw
+            ul
+                margin-bottom: 1.83vw
+                li
+                    color: $white
+                    font-size: 1.05vw
+                    font-weight: 700
+                    text-align: left
++xl
+    .fclp__summit--sec 
+        .fclp__content--sec 
+            .fclp__content--sec-inner
+                ul 
+                    li
+                        font-size: 14px
++tablet
+    .fclp__summit--sec 
+        .fclp__content--sec 
+            .fclp__content--sec-inner 
+                p
+                    max-width: 100%
++mobile
+    .fclp__summit--sec 
+        .fclp__content--sec 
+            .fclp__content--sec-inner
+                padding: 50px 20px
